@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.cab415cb.css",
-    "main.js": "/static/js/main.34e55540.js",
-    "index.html": "/index.html",
-    "main.cab415cb.css.map": "/static/css/main.cab415cb.css.map",
-    "main.34e55540.js.map": "/static/js/main.34e55540.js.map"
+    "main.css": "/virtual-commissioning-test/static/css/main.cab415cb.css",
+    "main.js": "/virtual-commissioning-test/static/js/main.34e55540.js",
+    "index.html": "/virtual-commissioning-test/index.html",
+    "main.cab415cb.css.map": "/virtual-commissioning-test/static/css/main.cab415cb.css.map",
+    "main.34e55540.js.map": "/virtual-commissioning-test/static/js/main.34e55540.js.map"
   },
   "entrypoints": [
     "static/css/main.cab415cb.css",

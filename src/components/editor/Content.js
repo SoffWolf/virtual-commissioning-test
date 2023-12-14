@@ -11,7 +11,7 @@ const Content = ({ tab }) => {
         - Edit text documents, such as the one you are currently viewing. \n\
         - Modify Programmable Logic Controller (PLC) logic, which is showcased in the second tab. \n\
         - Explore a virtual factory simulation, illustrated in the third tab. \n\
-          Hold \"b\" button and click to add blocks, \"Shift\" to delete. \n\
+          Hold \"b\" button and click to add blocks, \"Shift\" to delete, \"Space\" to start simulation. \n\
       \n\
       I encourage you to explore the other two tabs for a comprehensive understanding of the IDE's capabilities. \n\
     ";

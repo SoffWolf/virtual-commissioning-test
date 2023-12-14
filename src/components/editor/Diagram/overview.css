@@ -28,14 +28,15 @@
   position: relative;
   width: 100px;
   transform: translate(8px);
-  font-size: 8px;
+  font-size: 7px;
   pointer-events: none;
 }
 
 .output {
   position: relative;
+  text-align: right;
   width: 100px;
-  transform: translate(-34px);
-  font-size: 8px;
+  transform: translate(-102px);
+  font-size: 7px;
   pointer-events: none;
 }

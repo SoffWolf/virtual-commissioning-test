@@ -2,28 +2,53 @@ const outlineTreeData = {
   Properties: {
     type: 'folder',
     children: {
-      property1: { type: 'file' },
-      property2: { type: 'file' },
+      Configuration: { type: 'file' },
+      VersionInfo: { type: 'file' },
+      DeviceSettings: { type: 'file' },
     },
   },
   Interfaces: {
     type: 'folder',
     children: {
-      interface1: {
+      Communication: {
         type: 'folder',
         children: {
-          subInterface1: { type: 'file' },
-          subInterface2: { type: 'file' },
+          EthernetSettings: { type: 'file' },
+          SerialPortConfig: { type: 'file' },
         },
       },
-      interface2: { type: 'file' },
+      IO_Mapping: {
+        type: 'folder',
+        children: {
+          DigitalInputs: { type: 'file' },
+          AnalogInputs: { type: 'file' },
+          OutputSignals: { type: 'file' },
+        },
+      },
+    },
+  },
+  ControlLogic: {
+    type: 'folder',
+    children: {
+      MainProgram: { type: 'file' },
+      SafetyRoutines: { type: 'file' },
+      ErrorHandling: { type: 'file' },
     },
   },
   Events: {
     type: 'folder',
     children: {
-      event1: { type: 'file' },
-      event2: { type: 'file' },
+      SystemEvents: { type: 'file' },
+      UserEvents: { type: 'file' },
+      Alarms: { type: 'file' },
+    },
+  },
+  DataLogging: {
+    type: 'folder',
+    children: {
+      OperationLogs: { type: 'file' },
+      MaintenanceLogs: { type: 'file' },
+      ErrorLogs: { type: 'file' },
     },
   },
 };

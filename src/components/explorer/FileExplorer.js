@@ -2,27 +2,72 @@ import React from "react";
 import fileTreeData from "./fileTreeData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFolder,
-  faFile,
   faAngleDown,
   faAngleRight,
+  faCogs,
+  faCog,
+  faMicrochip,
+  faBook,
+  faClipboardList,
+  faPencilRuler,
+  faThermometerHalf
 } from "@fortawesome/free-solid-svg-icons";
 import Outline from "./Outline";
 
-const FileIcon = ({ type }) => {
-  return (
-    <span className="mr-3">
-      {type === "folder" ? (
-        <FontAwesomeIcon icon={faFolder} className="text-yellow-500" />
-      ) : (
-        <FontAwesomeIcon icon={faFile} className="text-gray-500 ml-4" />
-      )}
-    </span>
-  );
+const FileIcon = ({ icon }) => {
+  if (icon === "project") {
+    return (
+      <span className="mr-3">
+        <FontAwesomeIcon icon={faClipboardList} className="text-orange-500" />
+      </span>
+    );
+  }
+  if (icon === "system") {
+    return (
+      <span className="mr-3">
+        <FontAwesomeIcon icon={faCogs} className="text-gray-300" />
+      </span>
+    );
+  }
+  if (icon === "library") {
+    return (
+      <span className="mr-3">
+        <FontAwesomeIcon icon={faBook} className="text-orange-300" />
+      </span>
+    );
+  }
+  if (icon === "setting") {
+    return (
+      <span className="mr-3 ml-4">
+        <FontAwesomeIcon icon={faCog} className="text-gray-500" />
+      </span>
+    );
+  }
+  if (icon === "design") {
+    return (
+      <span className="mr-3 ml-4">
+        <FontAwesomeIcon icon={faPencilRuler} className="text-orange-500" />
+      </span>
+    );
+  }
+  if (icon === "controller") {
+    return (
+      <span className="mr-3 ml-4">
+        <FontAwesomeIcon icon={faMicrochip} className="text-blue-500" />
+      </span>
+    );
+  }
+  if (icon === "sensor") {
+    return (
+      <span className="mr-3 ml-4">
+        <FontAwesomeIcon icon={faThermometerHalf} className="text-blue-500" />
+      </span>
+    );
+  }
 };
 
-const FileNode = ({ name, type, children, topLevel = false }) => {
-  const [isOpen, setIsOpen] = React.useState(topLevel); // Keeps the top level always open
+const FileNode = ({ name, type, icon, children, topLevel = false }) => {
+  const [isOpen, setIsOpen] = React.useState(true); // Keeps the top level always open
 
   const handleToggle = () => {
     if (!topLevel) {
@@ -46,7 +91,7 @@ const FileNode = ({ name, type, children, topLevel = false }) => {
             />
           </span>
         )}
-        {!topLevel && <FileIcon type={type} />}
+        {!topLevel && <FileIcon icon={icon} />}
         <span>{name}</span>
       </div>
       {isOpen && type === "folder" && (

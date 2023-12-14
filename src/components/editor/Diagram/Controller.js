@@ -35,10 +35,9 @@
 import React, { memo } from "react";
 import { Handle, useReactFlow, useStoreApi, Position } from "reactflow";
 
-function Port({ value, handleId, nodeId, position, type, index }) {
+function Port({ value, handleId, nodeId, position, type, index, portName }) {
   const { setNodes } = useReactFlow();
   const store = useStoreApi();
-
   return (
       <Handle
         type={type}
@@ -47,9 +46,9 @@ function Port({ value, handleId, nodeId, position, type, index }) {
         style={{ top: 50 + index * 30, zIndex: "initial" }}
       >
         {type === "target" ? (
-          <p className="input">INPUT</p>
+          <p className="input">{portName}</p>
         ) : (
-          <p className="output">OUTPUT</p>
+          <p className="output">{portName}</p>
         )}
       </Handle>
   );
@@ -71,6 +70,7 @@ function Controller({ id, data }) {
             position={Position.Left}
             type={"target"}
             index={index}
+            portName={data.inputs[handleId]}
           />
         ))}
         {Object.keys(data.outputs).map((handleId, index) => (
@@ -82,6 +82,7 @@ function Controller({ id, data }) {
             position={Position.Right}
             type={"source"}
             index={index}
+            portName={data.outputs[handleId]}
           />
         ))}
       </div>

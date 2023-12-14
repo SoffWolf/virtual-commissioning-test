@@ -112,7 +112,7 @@ function Robot() {
 
       // cubes
       let map = new THREE.TextureLoader().load(
-        "textures/square-outline-textured.png"
+        "square-outline-textured.png"
       );
       map.colorSpace = THREE.SRGBColorSpace;
       cubeGeo = new THREE.BoxGeometry(50, 50, 50);

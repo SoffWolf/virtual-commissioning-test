@@ -1,81 +1,96 @@
 const fileTreeData = {
   "root": {
-    "name": "virtual-commmissioning",
+    "name": "virtual-commissioning",
     "type": "folder",
     "icon": "folder-icon",
     "children": {
-      "folder1": {
-        "name": "folder1",
+      "MainFloor": {
+        "name": "MainFloor",
         "type": "folder",
-        "icon": "folder-icon",
+        "icon": "project",
         "children": {
-          "file1.js": {
-            "name": "file1.js",
+          "LayoutDesign": {
+            "name": "LayoutDesign",
             "type": "file",
-            "icon": "file-icon"
+            "icon": "design"
           },
-          "file2.js": {
-            "name": "file2.js",
+          "SafetyProtocols": {
+            "name": "SafetyProtocols",
             "type": "file",
-            "icon": "file-icon"
+            "icon": "design"
           },
-          "subfolder1": {
-            "name": "subfolder1",
+          "HardwareIntegration": {
+            "name": "HardwareIntegration",
             "type": "folder",
-            "icon": "folder-icon",
+            "icon": "project",
             "children": {
-              "file3.js": {
-                "name": "file3.js",
+              "SensorConfig": {
+                "name": "SensorConfig",
                 "type": "file",
-                "icon": "file-icon"
+                "icon": "sensor"
               },
-              "file4.js": {
-                "name": "file4.js",
+              "MotorControl": {
+                "name": "MotorControl",
                 "type": "file",
-                "icon": "file-icon"
+                "icon": "setting"
               }
             }
           }
         }
       },
-      "folder2": {
-        "name": "folder2",
+      "SystemConfiguration": {
+        "name": "SystemConfiguration",
         "type": "folder",
-        "icon": "folder-icon",
+        "icon": "system",
         "children": {
-          "file5.js": {
-            "name": "file5.js",
+          "NetworkSettings": {
+            "name": "NetworkSettings",
             "type": "file",
-            "icon": "file-icon"
+            "icon": "setting"
           },
-          "subfolder2": {
-            "name": "subfolder2",
+          "UserManagement": {
+            "name": "UserManagement",
             "type": "folder",
-            "icon": "folder-icon",
+            "icon": "system",
             "children": {
-              "file6.js": {
-                "name": "file6.js",
+              "AccessControl": {
+                "name": "AccessControl",
                 "type": "file",
-                "icon": "file-icon"
+                "icon": "setting"
               }
             }
           }
         }
       },
-      "folder3": {
-        "name": "folder3",
+      "Library": {
+        "name": "Library",
         "type": "folder",
-        "icon": "folder-icon",
+        "icon": "library",
         "children": {
-          "file7.js": {
-            "name": "file7.js",
+          "SiemensS7-1200": {
+            "name": "SiemensS7-1200",
             "type": "file",
-            "icon": "file-icon"
+            "icon": "controller"
           },
-          "file8.js": {
-            "name": "file8.js",
+          "RockwellControlLogix": {
+            "name": "RockwellControlLogix",
             "type": "file",
-            "icon": "file-icon"
+            "icon": "controller"
+          },
+          "MitsubishiFXSeries": {
+            "name": "MitsubishiFXSeries",
+            "type": "file",
+            "icon": "controller"
+          },
+          "SchneiderModicon": {
+            "name": "SchneiderModicon",
+            "type": "file",
+            "icon": "controller"
+          },
+          "ABBAC500": {
+            "name": "ABBAC500",
+            "type": "file",
+            "icon": "controller"
           }
         }
       }

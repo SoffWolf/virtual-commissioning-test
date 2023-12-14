@@ -27,8 +27,6 @@ const rfStyle = {
   backgroundColor: '#111827',
 };
 
-const onInit = (reactFlowInstance) => console.log('flow loaded:', reactFlowInstance);
-
 const Diagram = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -57,7 +55,6 @@ const Diagram = () => {
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
       onConnect={onConnect}
-      onInit={onInit}
       fitView
       nodeTypes={nodeTypes}
       style={rfStyle}

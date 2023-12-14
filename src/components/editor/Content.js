@@ -4,18 +4,19 @@ import Robot from "./Robot";
 const Content = ({ tab }) => {
   const welcomeText =
     "\n\
-     Welcome to the demo of the virtual commissioning IDE!\n\
-     \n\
-     This is just a visual proof of concept so most interactions won't work.\n\
-     In this IDE, you can:\n\
-      - Edit text files, like this one.\n\
-      - Edit PLC logic, example in the second tab.\n\
-      - Visualize a virtual factory, example in the third tab.\n\
-     Please check the other 2 tabs!";
+      Welcome to the demonstration of the Virtual Commissioning IDE! \n\
+      \n\
+      This demonstration serves as a visual proof of concept. \n\
+      Please note that most interactive features are not functional in this demo version. In this IDE, you can: \n\
+        - Edit text documents, such as the one you are currently viewing. \n\
+        - Modify Programmable Logic Controller (PLC) logic, which is showcased in the second tab. \n\
+        - Explore a virtual factory simulation, illustrated in the third tab. \n\
+          Hold \"b\" button and click to add blocks, \"Shift\" to delete. \n\
+      \n\
+      I encourage you to explore the other two tabs for a comprehensive understanding of the IDE's capabilities. \n\
+    ";
   if (tab === 1) {
-    const lineNumbers = Array.from({ length: 9 }, (_, i) => i + 1).join(
-      "\n"
-    );
+    const lineNumbers = Array.from({ length: 11 }, (_, i) => i + 1).join("\n");
 
     return (
       <div className="flex h-full">

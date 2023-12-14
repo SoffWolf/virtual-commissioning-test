@@ -107,9 +107,9 @@ const FileNode = ({ name, type, icon, children, topLevel = false }) => {
 
 const FileExplorer = () => {
   return (
-    <div className="h-full flex flex-col bg-black text-white">
+    <div className="h-screen flex flex-col bg-black text-white">
       {/* File Tree */}
-      <div className="flex-1 p-4 overflow-y-auto">
+      <div className="h-2/3 flex-1 p-4 overflow-y-auto">
         <h1 className="text-lg font-bold mb-4">Explorer</h1>
         <div>
           {Object.keys(fileTreeData).map((nodeName) => (
